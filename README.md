@@ -1,4 +1,5 @@
-# @rafaelbianchi/generator-node [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+# @rafaelbillbianchi/generator-node
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![MIT License][license-image]][license-url]
 > Yeoman generator for Node projects.
 
 ## Installation
@@ -16,12 +17,49 @@ Then generate your new project:
 yo @rafaelbillbianchi/node
 ```
 
-## Getting To Know Yeoman
+### This generator provides the following features:
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+- ***Project Structure:***
+  - `.vscode/extensions.json`: Configuration for Visual Studio Code extensions.
+  - `src/index.js`: Entry point for your Node.js project.
+
+- ***Configuration Files:***
+  - `.editorconfig`: Editor configuration settings.
+  - `.eslint.config.js`: ESLint configuration file.
+  - `.gitignore`: Git ignore file to specify ignored files in Git.
+  - `.npmrc`: Configuration file for npm settings.
+
+- ***License and Metadata:***
+  - `LICENSE`: MIT License for your project.
+  - `package.json`: Project metadata including dependencies and scripts.
+  - `README.md`: Project documentation and instructions.
+
+
+## Project files
+
+```
+|--- .vscode
+|   |--- extensions.json
+|--- src
+|   |--- index.js
+|--- .editorconfig
+|--- .eslint.config.js
+|--- .gitignore
+|--- .npmrc
+|--- LICENSE
+|--- package.json
+|--- README.md
+```
+
+# Development
+### Prerequisites
+- [Node.js](https://nodejs.org/)
+- [npm](https://www.npmjs.com/get-npm)
+- [Yarn](https://classic.yarnpkg.com/en/docs/install/)
+- [Yeoman CLI](http://yeoman.io/learning/)
+
+
+
 
 ## License
 
@@ -29,8 +67,8 @@ MIT © [Rafael Bianchi](https://bianchi-app.vercel.app/)
 
 
 [npm-image]: https://badge.fury.io/js/%40rafaelbianchi%2Fgenerator-node.svg
-[npm-url]: https://npmjs.org/package/@rafaelbianchi/generator-node
+[npm-url]: https://www.npmjs.com/package/@rafaelbillbianchi/generator-node
 [travis-image]: https://travis-ci.com/rafaelbianchi/generator-node.svg?branch=master
-[travis-url]: https://travis-ci.com/rafaelbianchi/generator-node
-[daviddm-image]: https://david-dm.org/rafaelbianchi/generator-node.svg?theme=shields.io
-[daviddm-url]: https://david-dm.org/rafaelbianchi/generator-node
+[travis-url]: https://www.npmjs.com/package/@rafaelbillbianchi/generator-node
+[license-image]: https://camo.githubusercontent.com/473c5a79aa94a76d78d103abb8db17a5d959e75bb9c539dafc5d5faf02a41c6e/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f726f626572746f61636861722f67656e657261746f722d6e6f64652e737667
+[license-url]: https://github.com/BianchiBill/generator-node/blob/main/LICENSE

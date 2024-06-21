@@ -6,30 +6,16 @@ const files = require("./files");
 
 module.exports = class extends Generator {
   prompting() {
-    // Have Yeoman greet the user.
-    // this.log(
-    //   yosay(
-    //     `Welcome to the ${chalk.red(
-    //       "@rafaelbianchi/generator-node"
-    //     )} generator!`
-    //   )
-    // );
     this.log(chalk.green("Bianchi Node Project Generator"));
     this.log(chalk.green("Made by Rafael 'Bill' Bianchi"));
     this.log();
 
     const prompts = [
-      // {
-      //   type: "confirm",
-      //   name: "someAnswer",
-      //   message: "Would you like to enable this option?",
-      //   default: true
-      // }
       {
         type: "input",
         name: "project",
         message: "Name of your project",
-        default: "my-node-project"
+        default: this.appname
       },
       {
         type: "input",
@@ -41,18 +27,21 @@ module.exports = class extends Generator {
         type: "input",
         name: "name",
         message: "What is your name?",
+        default: this.name,
         store: true
       },
       {
         type: "input",
         name: "email",
         message: "What is your email?",
+        default: this.email,
         store: true
       },
       {
         type: "input",
         name: "username",
         message: "What is your GitHub username?",
+        default: this.username,
         store: true
       }
     ];

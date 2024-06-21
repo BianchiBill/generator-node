@@ -7,7 +7,7 @@ First, install [Yeoman](http://yeoman.io) and @rafaelbillbianchi/generator-node 
 
 ```bash
 npm install -g yo
-npm install -g @rafaelbianchi/generator-node
+npm install -g @rafaelbillbianchi/generator-node
 ```
 
 Then generate your new project:

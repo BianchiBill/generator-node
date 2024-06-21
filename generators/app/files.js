@@ -1,5 +1,9 @@
 const files = [
   { template: "src/index.js.template", destination: "src/index.js" },
+  {
+    template: "vscode/extensions.json.template",
+    destination: ".vscode/extensions.json"
+  },
   { template: "editorconfig.template", destination: ".editorconfig" },
   {
     template: "eslint.config.json.template",

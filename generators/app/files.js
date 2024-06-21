@@ -16,4 +16,4 @@ const files = [
   { template: "README.md.template", destination: "README.md" }
 ];
 
-export default files;
+module.exports = files;

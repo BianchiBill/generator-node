@@ -98,7 +98,9 @@ module.exports = class extends Generator {
   }
 
   end() {
+    this.fs.delete(".yo-rc.json");
+
     this.log();
-    this.log("🎉  Successfully generated!");
+    this.log("Successfully generated!");
   }
 };

@@ -1,11 +1,9 @@
 import eslintConfigPrettier from 'eslint-config-prettier';
 import js from '@eslint/js';
 import stylisticJs from '@stylistic/eslint-plugin-js';
-import tseslint from 'typescript-eslint';
 
 export default [
     js.configs.recommended,
-    ...tseslint.configs.recommended,
     {
         files:[ '**/*' ],
         plugins: {

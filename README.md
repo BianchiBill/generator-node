@@ -3,7 +3,7 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and @rafaelbianchi/generator-node using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and @rafaelbillbianchi/generator-node using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
 ```bash
 npm install -g yo
@@ -13,7 +13,7 @@ npm install -g @rafaelbianchi/generator-node
 Then generate your new project:
 
 ```bash
-yo @rafaelbianchi/node
+yo @rafaelbillbianchi/node
 ```
 
 ## Getting To Know Yeoman

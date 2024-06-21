@@ -7,7 +7,7 @@ const files = [
   { template: "editorconfig.template", destination: ".editorconfig" },
   {
     template: "eslint.config.js.template",
-    destination: ".eslint.config.js"
+    destination: "eslint.config.js"
   },
   { template: "gitignore.template", destination: ".gitignore" },
   { template: "LICENSE.template", destination: "LICENSE" },

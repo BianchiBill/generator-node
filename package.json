@@ -1,9 +1,10 @@
 {
-  "name": "@rafaelbianchi/generator-node",
+  "name": "@rafaelbillbianchi/generator-node",
   "version": "1.0.0",
   "description": "Yeoman generator for Node projects.",
   "homepage": "https://github.com/BianchiBill/generator-node",
   "author": "Rafael Bianchi",
+  "type": "commonjs",
   "files": [
     "generators"
   ],
@@ -74,5 +75,8 @@
     "pretest": "eslint .",
     "test": "jest"
   },
-  "repository": "https://github.com/BianchiBill/generator-node.git"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BianchiBill/generator-node.git"
+  }
 }

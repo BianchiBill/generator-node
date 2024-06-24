@@ -24,6 +24,21 @@ module.exports = class extends Generator {
         default: "This project aim to..."
       },
       {
+        type: "list",
+        name: "type",
+        message: "Type? (module or commonjs)",
+        choices: ["module", "commonjs"],
+        default: "module",
+        store: true
+      },
+      {
+        type: "confirm",
+        name: "privated",
+        message: "Private?",
+        default: false,
+        store: true
+      },
+      {
         type: "input",
         name: "name",
         message: "What is your name?",
@@ -56,7 +71,15 @@ module.exports = class extends Generator {
     this.log(chalk.green("Please Wait..."));
     this.log();
 
-    const { project, description, name, email, username } = this.props;
+    const {
+      project,
+      description,
+      name,
+      email,
+      username,
+      type,
+      privated
+    } = this.props;
 
     const templates = {
       project,
@@ -64,6 +87,8 @@ module.exports = class extends Generator {
       name,
       email,
       username,
+      type,
+      privated,
       year: new Date().getFullYear()
     };
 

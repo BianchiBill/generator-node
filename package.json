@@ -1,6 +1,6 @@
 {
   "name": "@rafaelbillbianchi/generator-node",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Yeoman generator for Node projects.",
   "homepage": "https://github.com/BianchiBill/generator-node",
   "author": "Rafael Bianchi",

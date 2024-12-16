@@ -1,0 +1,24 @@
+/* eslint-disable no-console */
+
+// Use this file to test your functions.
+// Exemplo de uso / Example of use:
+// ./src/sum.js
+// export const sum = (num1, num2) => num1 + num2;
+
+// Import functions / Importe funções
+// import { sum } from './src/sum.js';
+
+(async () => {
+  try {
+    console.log('Executing src/run.js'); // Executando src/run.js
+
+    // Example call / Chamada de exemplo:
+    // const result = sum(255, 6);
+    // console.log(`Result: ${result}`); // Resultado: ${result}
+
+    // Add your test logic here / Adicione aqui a lógica dos testes
+  } catch (error) {
+    console.error('An error occurred during execution:', error);
+    // Ocorreu um erro durante a execução
+  }
+})();

@@ -5,7 +5,7 @@ const chalk = require("chalk");
 const files = require("./files");
 
 module.exports = class extends Generator {
-  prompting() {
+  async prompting() {
     this.log(chalk.green("Bianchi Node Project Generator"));
     this.log(chalk.green("Made by Rafael 'Bill' Bianchi"));
     this.log();
@@ -15,7 +15,7 @@ module.exports = class extends Generator {
         type: "input",
         name: "project",
         message: "Name of your project",
-        default: this.appname
+        default: this.appname.replace(' ', '-')
       },
       {
         type: "input",
@@ -58,12 +58,19 @@ module.exports = class extends Generator {
         message: "What is your GitHub username?",
         default: this.username,
         store: true
+      },
+      {
+        type: "confirm",
+        name: "config",
+        message: "Create .env config file?",
+        choices: ["Yes", "No"],
+        default: true,
+        store: true
       }
     ];
 
-    return this.prompt(prompts).then(props => {
-      this.props = props;
-    });
+    const props = await this.prompt(prompts);
+    this.props = props;
   }
 
   writing() {
@@ -78,7 +85,8 @@ module.exports = class extends Generator {
       email,
       username,
       type,
-      privated
+      privated,
+      config
     } = this.props;
 
     const templates = {
@@ -93,6 +101,10 @@ module.exports = class extends Generator {
     };
 
     files.forEach(file => {
+      if ((file.template === 'env.template' || file.template === 'config.js.template') && !config) {
+        return;
+      }
+
       this.fs.copyTpl(
         this.templatePath(file.template),
         this.destinationPath(file.destination),
@@ -101,9 +113,6 @@ module.exports = class extends Generator {
     });
   }
 
-  // Install() {
-  //   this.installDependencies();
-  // }
   install() {
     this.log();
     this.log("📦  Installing dependencies...");
@@ -118,8 +127,10 @@ module.exports = class extends Generator {
         "eslint-config-prettier",
         "nodemon"
       ],
-      { dev: true }
+      { dev: true },
     );
+
+    this.yarnInstall(["dotenv"], { dev: false });
   }
 
   end() {

@@ -1,0 +1,27 @@
+
+/* eslint no-process-env: 0 */
+import path, { dirname } from 'path';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath( import.meta.url );
+const __dirname = dirname( __filename );
+
+dotenv.config({ path: path.resolve( __dirname, './.env' ) });
+
+const environment = [
+  'NODE_ENV',
+];
+
+environment.forEach( ( name ) => {
+  /* istanbul ignore if */
+  if ( !process.env[ name ] ) {
+    throw new Error( `${name}: ${process.env[ name ]}` );
+  }
+});
+
+const config = {
+  NODE_ENV: process.env.NODE_ENV,
+};
+
+export default config;

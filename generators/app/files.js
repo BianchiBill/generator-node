@@ -1,5 +1,8 @@
 const files = [
   { template: "src/index.js.template", destination: "src/index.js" },
+  { template: "src/run.js.template", destination: "src/run.js" },
+  { template: "src/config.js.template", destination: "src/config.js" },
+  { template: "src/.env.template", destination: "src/.env" },
   {
     template: "vscode/extensions.json.template",
     destination: ".vscode/extensions.json"

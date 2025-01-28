@@ -82,22 +82,6 @@ module.exports = class extends Generator {
         choices: ["module", "commonjs"],
         default: "module",
         store: true
-      },
-      {
-        type: "confirm",
-        name: "strict",
-        message: "Enable TypeScript strict mode?",
-        default: true,
-        store: true,
-        when: (answers) => answers.language === "TypeScript"
-      },
-      {
-        type: "list",
-        name: "tsconfigPreset",
-        message: "Choose a TypeScript preset",
-        choices: ["Node.js", "React", "Custom"],
-        default: "Node.js",
-        when: (answers) => answers.language === "TypeScript"
       }
     ];
 
@@ -181,7 +165,7 @@ module.exports = class extends Generator {
     this.log("📦  Installing dependencies...");
     this.log();
 
-    if (packageManager.toLowerCase() === 'yarn') {
+    if (this.props.packageManager.toLowerCase() === 'yarn') {
 
       if (language.toLowerCase() === 'vanilla') {
         this.yarnInstall(
@@ -219,7 +203,7 @@ module.exports = class extends Generator {
       }
     }
 
-    if (packageManager.toLowerCase() === 'npm') {
+    if (this.props.packageManager.toLowerCase() === 'npm') {
 
       if (language.toLowerCase() === 'vanilla') {
         this.yarnInstall(

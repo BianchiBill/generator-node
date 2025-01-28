@@ -37,11 +37,33 @@ yo @rafaelbillbianchi/node
 
 ## Project files
 
-```
+```javascript
+//vanilla
 |--- .vscode
 |   |--- extensions.json
 |--- src
 |   |--- index.js
+|   |---run.js
+|   |--- .env
+|   |--- config.js
+|--- .editorconfig
+|--- .eslint.config.js
+|--- .gitignore
+|--- .npmrc
+|--- LICENSE
+|--- package.json
+|--- README.md
+```
+
+```javascript
+//typescript
+|--- .vscode
+|   |--- extensions.json
+|--- src
+|   |--- index.ts
+|   |---run.ts
+|   |--- .env
+|   |--- config.ts
 |--- .editorconfig
 |--- .eslint.config.js
 |--- .gitignore

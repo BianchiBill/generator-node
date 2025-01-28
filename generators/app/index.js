@@ -104,6 +104,7 @@ module.exports = class extends Generator {
       privated,
       config,
       language,
+      packageManager,
     } = this.props;
 
     const templates = {

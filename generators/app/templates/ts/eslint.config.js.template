@@ -1,0 +1,87 @@
+import eslintConfigPrettier from 'eslint-config-prettier';
+
+export default [
+  {
+    parser: '@typescript-eslint/parser',
+    parserOptions: {
+      project: './tsconfig.json',
+      tsconfigRootDir: __dirname,
+      ecmaVersion: 2020,
+      sourceType: 'module',
+    },
+    extends: [
+      'airbnb-typescript',
+      'plugin:@typescript-eslint/recommended',
+      'prettier',
+      'plugin:prettier/recommended',
+    ],
+    plugins: ['@typescript-eslint', 'prettier'],
+    env: {
+      node: true,
+      browser: true,
+      es2021: true,
+    },
+    rules: {
+      'prettier/prettier': 'error',
+      'no-console': 'off',
+      'no-process-env': 'error',
+      'import/prefer-default-export': 'off',
+      'no-undef': 'off',
+      'key-spacing': [
+        'error',
+        {
+          multiLine: {
+            beforeColon: false,
+            afterColon: true,
+          },
+          align: {
+            beforeColon: true,
+            afterColon: true,
+            on: 'colon',
+          },
+          singleLine: {
+            beforeColon: false,
+            afterColon: true,
+          },
+        },
+      ],
+      '@stylistic/js/keyword-spacing': ['error', { after: true, before: true }],
+      '@stylistic/js/arrow-parens': ['error', 'always'],
+      '@stylistic/js/brace-style': 'error',
+      '@stylistic/js/arrow-spacing': 'error',
+      '@stylistic/js/block-spacing': 'error',
+      '@stylistic/js/comma-dangle': ['error', 'always-multiline'],
+      '@stylistic/js/space-in-parens': ['error', 'always', { exceptions: ['{}'] }],
+      '@stylistic/js/space-before-blocks': 'error',
+      '@stylistic/js/space-before-function-paren': 'error',
+      '@stylistic/js/space-infix-ops': 'error',
+      '@stylistic/js/spaced-comment': ['error', 'always'],
+      '@stylistic/js/switch-colon-spacing': ['error', { after: true, before: false }],
+      '@stylistic/js/comma-spacing': ['error', { before: false, after: true }],
+      '@typescript-eslint/no-unused-vars': ['error'],
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
+      '@typescript-eslint/ban-ts-comment': 'off',
+      'max-len': ['error', { code: 100 }],
+      'semi': ['error', 'always'],
+      'object-curly-spacing': ['error', 'always'],
+      'array-bracket-spacing': ['error', 'always'],
+      'computed-property-spacing': ['error', 'always'],
+      'arrow-parens': ['error', 'always'],
+      'quotes': ['error', 'single'],
+    },
+  },
+  eslintConfigPrettier,
+  {
+    rules: {
+      indent: ['error', 2],
+      'max-len': ['error', { code: 100 }],
+      'semi': ['error', 'always'],
+      'object-curly-spacing': ['error', 'always'],
+      'array-bracket-spacing': ['error', 'always'],
+      'computed-property-spacing': ['error', 'always'],
+      'arrow-parens': ['error', 'always'],
+      quotes: ['error', 'single'],
+    },
+  },
+];

@@ -1,0 +1,33 @@
+{
+  "name": "<%= project%>",
+  "version": "1.0.0",
+  "description": "<%= description%>",
+  "author": "<%= name%> <<%=email%>>",
+  "type": "<%= type %>",
+  "private": <%= privated %>,
+  "homepage": "https://github.com/<%= username%>/<%= project%>#readme",
+  "keywords": [
+    "node"
+  ],
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsx src/run.ts",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/<%= username%>/<%= project%>.git"
+  },
+  "bugs": {
+    "url": "https://github.com/<%= username%>/<%= project%>/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT"
+}

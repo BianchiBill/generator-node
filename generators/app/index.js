@@ -168,7 +168,7 @@ module.exports = class extends Generator {
 
     if (this.props.packageManager.toLowerCase() === 'yarn') {
 
-      if (language.toLowerCase() === 'vanilla') {
+      if (this.props.language.toLowerCase() === 'vanilla') {
         this.yarnInstall(
           [
             "@eslint/js",
@@ -182,7 +182,7 @@ module.exports = class extends Generator {
         );
       }
 
-      if (language.toLowerCase() === 'typescript') {
+      if (this.props.language.toLowerCase() === 'typescript') {
         this.yarnInstall(
           [
             "typescript",
@@ -206,7 +206,7 @@ module.exports = class extends Generator {
 
     if (this.props.packageManager.toLowerCase() === 'npm') {
 
-      if (language.toLowerCase() === 'vanilla') {
+      if (this.props.language.toLowerCase() === 'vanilla') {
         this.yarnInstall(
           [
             "@eslint/js",

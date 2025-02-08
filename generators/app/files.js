@@ -18,6 +18,7 @@ const files =
       template: "vscode/extensions.json.template",
       destination: ".vscode/extensions.json"
     },
+    { template: "ts/tsconfig.json.template", destination: "tsconfig.json" },
     { template: "ts/package.json.template", destination: "package.json" },
     { template: "editorconfig.template", destination: ".editorconfig" },
     {
